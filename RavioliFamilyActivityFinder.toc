@@ -1,8 +1,0 @@
-## Interface: 30300
-## Title: Ravioli Family Activity Finder
-## Notes: Create and browse Ravioli family group activity listings.
-## Author: Zendan
-## Version: 1.0.7
-## SavedVariables: RavioliFamilyActivityFinderDB
-
-RavioliFamilyActivityFinder.lua
