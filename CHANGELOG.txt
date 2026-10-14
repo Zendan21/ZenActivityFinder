@@ -1,0 +1,72 @@
+ZenActivityFinder 2.1.1
+=======================
+
+Native Orb Farms
+----------------
+- Orb farming support is now entirely native to ZenActivityFinder.
+- Removed all external Orb addon bridge functions and source metadata.
+- No OrbQueue dependency, communication, fallback channel, or runtime integration remains.
+- Retained the useful activity concepts: 5-player Orb Farms, Trial of the Champion / event-boss presets, role-need calculation, role-aware invite requests, and applicant role icons.
+
+ZenActivityFinder 2.1.0
+=======================
+
+Orb Farms
+---------
+- Added Orb Farms as a first-class activity category.
+- Added a + Orb Farm quick-create action.
+- Orb listings are fixed to 5 players and automatically identify Trial of the Champion or the currently selected supported RDF event boss.
+- Added automatic Orb Farm role-need calculation based on party class capabilities.
+- Listings show the requested role in the browse and details views.
+- Players whose class cannot fill the requested Orb Farm role are prevented from sending an unsuitable invite request.
+- Applicant rows include role icons for Orb Farm listings.
+- Orb metadata is appended to the existing EbonAPI listing protocol while remaining compatible with 2.0 clients.
+
+
+Commands
+--------
+- Added /zaf orb.
+- Added /zaf orbhost.
+
+ZenActivityFinder 2.0.0
+=======================
+
+Renamed
+-------
+- Renamed Ravioli Family Activity Finder to ZenActivityFinder.
+- New addon folder: ZenActivityFinder.
+- New SavedVariables database: ZenActivityFinderDB.
+- New primary commands: /zaf and /zenactivity.
+- /ravfinder remains as a legacy shortcut.
+
+EbonAPI transport
+-----------------
+- EbonAPI 2.1.2+ is now a required dependency.
+- Removed the addon's private RavioliFinder channel transport.
+- Listings, removals, refreshes, presence, join requests/responses, and interest state now use EbonAPI's managed shared channel.
+- EbonAPI owns channel joining, framing/chunking, throttling, sender routing, and reconnection.
+- Player-triggered Guild/Party/Raid shares remain normal visible chat messages.
+
+Zen styling
+-----------
+- Embedded ZenStylingPack 1.1.0 directly into the addon.
+- Panels, buttons, inputs, text, hover states, accents, fonts, opacity, and scale now use the Zen styling layer.
+- Added Settings > Appearance and /zaf appearance.
+- Supports Zen Classic, Obsidian, Glass, Flat, Brutal, and Neon.
+- Appearance may be local to ZenActivityFinder or shared globally through EbonAPI.
+
+Preserved features
+------------------
+- Activity creation and browsing.
+- Applicants and invite handling.
+- Interested state and counts.
+- Share actions.
+- Game-mode compatibility checks.
+- Listing expiry/refresh.
+- Optional activity toasts, sounds, unread attention, and notification controls.
+- Optional compatibility registration with Ravioli Menu if it is installed.
+
+Upgrade note
+------------
+- Disable/remove the old RavioliFamilyActivityFinder addon after installing ZenActivityFinder so both do not run simultaneously.
+- The renamed addon uses its own SavedVariables file; the old addon's saved settings are not deleted.
