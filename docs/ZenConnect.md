@@ -181,7 +181,7 @@ If multiple Zen addons embed ZenConnect, the newest compatible copy should initi
 
 ## ZenActivityFinder migration
 
-ZenActivityFinder should eventually depend on ZenConnect rather than EbonAPI.
+ZenActivityFinder should use ZenConnect as its communication layer.
 
 The Activity Finder should send logical events such as:
 
@@ -226,13 +226,13 @@ Zen addons
 5. Add one shared WoW 3.3.5 transport.
 6. Add queueing, throttling, chunking and reassembly.
 7. Add presence and capability discovery.
-8. Migrate ZenActivityFinder from EbonAPI to ZenConnect.
+8. Integrate ZenActivityFinder with ZenConnect.
 9. Migrate ZenStyling global synchronization.
 10. Migrate other Zen addons as needed.
-11. Remove direct EbonAPI dependencies after in-game compatibility testing.
+11. Complete in-game compatibility testing across the Zen addon suite.
 
 ## Non-goals for v1
 
-ZenConnect should remain a focused communication library. It does not need to reproduce unrelated EbonAPI UI, localization, skinning or addon-specific features.
+ZenConnect should remain a focused communication library. It should not absorb UI, localization, skinning or addon-specific feature responsibilities.
 
 ZenStyling remains responsible for UI/appearance concerns.
